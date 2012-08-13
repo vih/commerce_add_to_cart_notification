@@ -12,21 +12,21 @@ function commerce_add_to_cart_confirmation_rules_action_info() {
           'type' => 'commerce_line_item',
           'label' => t('Product added to the cart'),
         ),
-        'message' => array(
+        'commerce_atcc_message' => array(
           'type' => 'text',
           'label' => t('Item successfully added to your cart'),
           'sanitize' => TRUE,
           'translatable' => TRUE,
           'default value' => t('Item successfully added to your cart'),
         ),
-        'commerce_checkout' => array(
+        'commerce_atcc_checkout' => array(
           'type' => 'text',
           'label' => t('Go to checkout'),
           'sanitize' => TRUE,
           'translatable' => TRUE,
           'default value' => t('Go to checkout'),
         ),
-        'commerce_continue' => array(
+        'commerce_atcc_continue' => array(
           'type' => 'text',
           'label' => t('Continue shopping'),
           'sanitize' => TRUE,
