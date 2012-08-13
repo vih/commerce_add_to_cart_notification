@@ -12,6 +12,27 @@ function commerce_add_to_cart_confirmation_rules_action_info() {
           'type' => 'commerce_line_item',
           'label' => t('Product added to the cart'),
         ),
+        'message' => array(
+          'type' => 'text',
+          'label' => t('Item successfully added to your cart'),
+          'sanitize' => TRUE,
+          'translatable' => TRUE,
+          'default value' => t('Item successfully added to your cart'),
+        ),
+        'commerce_checkout' => array(
+          'type' => 'text',
+          'label' => t('Go to checkout'),
+          'sanitize' => TRUE,
+          'translatable' => TRUE,
+          'default value' => t('Go to checkout'),
+        ),
+        'commerce_continue' => array(
+          'type' => 'text',
+          'label' => t('Continue shopping'),
+          'sanitize' => TRUE,
+          'translatable' => TRUE,
+          'default value' => t('Continue shopping'),
+        ),
       ),
       'group' => t('Commerce (contrib)'),
       'callbacks' => array(
@@ -24,14 +45,14 @@ function commerce_add_to_cart_confirmation_rules_action_info() {
 /**
  * Rules action: displays a custom Add to Cart message.
  */
-function commerce_add_to_cart_confirmation_rules_add_to_cart_message($line_item) {
-  $message = '<div class="added-product-title clearfix">' . t('Item successfully added to your cart') . '</div>';
+function commerce_add_to_cart_confirmation_rules_add_to_cart_message($line_item, $message, $checkout, $continue) {
+  $message = '<div class="added-product-title clearfix">' . filter_xss_admin($message) . '</div>';
   $message .= '<div class="button-wrapper">';
-  $message .= '<div class="button checkout">' . l(t('Go to checkout'), 'cart') . '</div>';
-  $message .= '<div class="button continue"><span class="commerce-add-to-cart-confirmation-close">' . t('Continue shopping') . '</span></div>';
+  $message .= '<div class="button checkout">' . l(filter_xss_admin($checkout), 'cart') . '</div>';
+  $message .= '<div class="button continue"><span class="commerce-add-to-cart-confirmation-close">' . filter_xss_admin($continue) . '</span></div>';
   $message .= '</div>';
   $message .= views_embed_view('confirm_message_product_display', 'default', $line_item->line_item_id);
   $close = t('Close');
 
-  drupal_set_message('<div class="message-inner">' . $message . '<a class="commerce-add-to-cart-confirmation-close" href="#"><span class="element-invisible">' . $close . '</span></a></div>', 'commerce-add-to-cart-confirmation');
+  drupal_set_message('<div class="message-inner">' . filter_xss_admin($message) . '<a class="commerce-add-to-cart-confirmation-close" href="#"><span class="element-invisible">' . $close . '</span></a></div>', 'commerce-add-to-cart-confirmation');
 }

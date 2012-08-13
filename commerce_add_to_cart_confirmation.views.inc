@@ -60,8 +60,6 @@ function commerce_add_to_cart_confirmation_views_default_views() {
   $handler->display->display_options['fields']['commerce_price']['table'] = 'field_data_commerce_price';
   $handler->display->display_options['fields']['commerce_price']['field'] = 'commerce_price';
   $handler->display->display_options['fields']['commerce_price']['relationship'] = 'commerce_product_product_id';
-  $handler->display->display_options['fields']['commerce_price']['label'] = 'Total';
-  $handler->display->display_options['fields']['commerce_price']['element_class'] = 'field';
   $handler->display->display_options['fields']['commerce_price']['click_sort_column'] = 'amount';
   $handler->display->display_options['fields']['commerce_price']['type'] = 'commerce_price_formatted_amount';
   $handler->display->display_options['fields']['commerce_price']['settings'] = array(
@@ -76,6 +74,7 @@ function commerce_add_to_cart_confirmation_views_default_views() {
   $handler->display->display_options['arguments']['line_item_id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['line_item_id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['line_item_id']['summary_options']['items_per_page'] = '25';
+
   $views[$view->name] = $view;
 
   return $views;

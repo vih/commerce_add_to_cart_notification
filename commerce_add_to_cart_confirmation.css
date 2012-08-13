@@ -30,7 +30,6 @@ div.messages.commerce-add-to-cart-confirmation {
   color: #aeaaa5;
   margin-left: -30% !important; /* width/2 */
   position: absolute;
-  top: 50px;
   left: 50%;
   width: 60%;
   z-index: 201;
