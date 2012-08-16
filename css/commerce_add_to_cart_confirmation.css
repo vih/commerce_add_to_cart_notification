@@ -2,7 +2,7 @@
 * Add to cart popin.
 */
 div.commerce_kickstart_add_to_cart_overlay {
-  background: transparent url('images/bg_add_to_cart_overlay.png') left top;
+  background: transparent url('../images/bg_add_to_cart_overlay.png') left top;
   height: 100%;
   position: fixed;
   top: 0;
@@ -40,7 +40,7 @@ div.messages.commerce-add-to-cart-confirmation {
 }
 
 .commerce-add-to-cart-confirmation .placeholder {
-  background: transparent url('images/bg_add_to_cart.png') left center no-repeat;
+  background: transparent url('../images/bg_add_to_cart.png') left center no-repeat;
   font-style: normal;
   font-weight: bold;
   padding-top: 5px;
@@ -102,7 +102,7 @@ div.messages.commerce-add-to-cart-confirmation {
 }
 
 .commerce-add-to-cart-confirmation-close {
-  background: url('images/btn_add-to-cart-close.png') no-repeat 0 0;
+  background: url('../images/btn_add-to-cart-close.png') no-repeat 0 0;
   width: 18px;
   height: 17px;
   display: block;

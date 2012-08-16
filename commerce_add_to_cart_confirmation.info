@@ -6,5 +6,6 @@ php = 5.2.4
 stylesheets[all][] = css/commerce_add_to_cart_confirmation.css
 scripts[] = js/commerce_add_to_cart_confirmation.js
 dependencies[] = commerce_cart
+dependencies[] = commerce_product_ui
 dependencies[] = views
 dependencies[] = rules
