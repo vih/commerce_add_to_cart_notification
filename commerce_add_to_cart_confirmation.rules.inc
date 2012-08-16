@@ -18,6 +18,7 @@ function commerce_add_to_cart_confirmation_rules_action_info() {
           'sanitize' => TRUE,
           'translatable' => TRUE,
           'default value' => t('Item successfully added to your cart'),
+          'optional' => TRUE,
         ),
         'commerce_atcc_checkout' => array(
           'type' => 'text',
@@ -25,6 +26,7 @@ function commerce_add_to_cart_confirmation_rules_action_info() {
           'sanitize' => TRUE,
           'translatable' => TRUE,
           'default value' => t('Go to checkout'),
+          'optional' => TRUE,
         ),
         'commerce_atcc_continue' => array(
           'type' => 'text',
@@ -32,6 +34,7 @@ function commerce_add_to_cart_confirmation_rules_action_info() {
           'sanitize' => TRUE,
           'translatable' => TRUE,
           'default value' => t('Continue shopping'),
+          'optional' => TRUE,
         ),
       ),
       'group' => t('Commerce (contrib)'),
@@ -46,6 +49,7 @@ function commerce_add_to_cart_confirmation_rules_action_info() {
  * Rules action: displays a custom Add to Cart message.
  */
 function commerce_add_to_cart_confirmation_rules_add_to_cart_message($line_item, $message, $checkout, $continue) {
+
   $message = '<div class="added-product-title clearfix">' . filter_xss_admin($message) . '</div>';
   $message .= '<div class="button-wrapper">';
   $message .= '<div class="button checkout">' . l(filter_xss_admin($checkout), 'cart') . '</div>';
