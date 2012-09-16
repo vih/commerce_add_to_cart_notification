@@ -13,8 +13,8 @@ function commerce_add_to_cart_confirmation_views_api() {
  * Create new view mode for product display, commerce product.
  */
 function commerce_add_to_cart_confirmation_entity_info_alter(&$entity_info) {
-  $entity_info['commerce_product']['view modes']['product_in_cart'] = array(
-    'label' => t('Product in cart'),
+  $entity_info['commerce_product']['view modes']['add_to_cart_confirmation_view'] = array(
+    'label' => t('Add to cart confirmation view'),
     'custom settings' => TRUE,
   );
 }
