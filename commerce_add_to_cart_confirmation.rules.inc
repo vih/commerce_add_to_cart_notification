@@ -14,10 +14,10 @@ function commerce_add_to_cart_confirmation_rules_action_info() {
         ),
         'commerce_atcc_message' => array(
           'type' => 'text',
-          'label' => t('Item successfully added to your cart'),
+          'label' => t('Successfully added person to registration'),
           'sanitize' => TRUE,
           'translatable' => TRUE,
-          'default value' => t('Item successfully added to your cart'),
+          'default value' => t('Successfully added person to registration'),
           'optional' => TRUE,
         ),
         'commerce_atcc_checkout' => array(
@@ -30,14 +30,14 @@ function commerce_add_to_cart_confirmation_rules_action_info() {
         ),
         'commerce_atcc_continue' => array(
           'type' => 'text',
-          'label' => t('Continue shopping'),
+          'label' => t('Register more'),
           'sanitize' => TRUE,
           'translatable' => TRUE,
-          'default value' => t('Continue shopping'),
+          'default value' => t('Register more'),
           'optional' => TRUE,
         ),
       ),
-      'group' => t('Commerce (contrib)'),
+      'group' => t('VIH Commerce'),
       'callbacks' => array(
         'execute' => 'commerce_add_to_cart_confirmation_rules_add_to_cart_message',
       ),
@@ -55,7 +55,6 @@ function commerce_add_to_cart_confirmation_rules_add_to_cart_message($line_item,
   $message .= '<div class="button checkout">' . l(filter_xss_admin($checkout), 'cart') . '</div>';
   $message .= '<div class="button continue"><span class="commerce-add-to-cart-confirmation-close">' . filter_xss_admin($continue) . '</span></div>';
   $message .= '</div>';
-  $message .= views_embed_view('confirm_message_product_display', 'default', $line_item->line_item_id);
   $close = t('Close');
 
   drupal_set_message('<div class="message-inner">' . filter_xss_admin($message) . '<a class="commerce-add-to-cart-confirmation-close" href="#"><span class="element-invisible">' . $close . '</span></a></div>', 'commerce-add-to-cart-confirmation');
