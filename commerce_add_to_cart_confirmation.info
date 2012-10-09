@@ -1,6 +1,7 @@
 name = Commerce add to cart confirmation
 description = Provides an "add to cart" confirmation screen.
 core = 7.x
+version = 1.0-alpha1
 package = Commerce (contrib)
 php = 5.2.4
 stylesheets[all][] = css/commerce_add_to_cart_confirmation.css
