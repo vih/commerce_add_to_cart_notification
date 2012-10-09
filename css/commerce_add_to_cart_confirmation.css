@@ -26,8 +26,8 @@ div.messages.commerce-add-to-cart-confirmation {
   height: 175px;
 }
 
-.commerce-add-to-cart-confirmation ul li {
-  list-style-type: none;
+.commerce-add-to-cart-confirmation ul {
+  list-style-type: none !important;
 }
 
 .commerce-add-to-cart-confirmation .placeholder {
