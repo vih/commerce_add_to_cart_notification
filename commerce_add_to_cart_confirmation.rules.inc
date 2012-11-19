@@ -52,7 +52,7 @@ function commerce_add_to_cart_confirmation_rules_add_to_cart_message($line_item,
 
   $message = '<div class="added-product-title clearfix">' . filter_xss_admin($message) . '</div>';
   $message .= '<div class="button-wrapper">';
-  $message .= '<div class="button checkout">' . l(filter_xss_admin($checkout), 'cart') . '</div>';
+  $message .= '<div class="button checkout">' . l(filter_xss_admin($checkout), 'checkout') . '</div>';
   $message .= '<div class="button continue"><span class="commerce-add-to-cart-confirmation-close">' . filter_xss_admin($continue) . '</span></div>';
   $message .= '</div>';
   $close = t('Close');
