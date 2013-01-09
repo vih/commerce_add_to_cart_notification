@@ -57,5 +57,5 @@ function commerce_add_to_cart_confirmation_rules_add_to_cart_message($line_item,
   $message .= '</div>';
   $close = t('Close');
 
-  drupal_set_message('<div class="message-inner">' . filter_xss_admin($message) . '<a class="commerce-add-to-cart-confirmation-close" href="#"><span class="element-invisible">' . $close . '</span></a></div>', 'commerce-add-to-cart-confirmation');
+  drupal_set_message('<div class="message-inner">' . filter_xss_admin($message) . '<a class="commerce-add-to-cart-confirmation-close" href="#add-to-cart-form-registration"><span class="element-invisible">' . $close . '</span></a></div>', 'commerce-add-to-cart-confirmation');
 }
